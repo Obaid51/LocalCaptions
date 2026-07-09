@@ -1,0 +1,47 @@
+name: "🛠️ Capture stopped working"
+description: Transcript isn't appearing or is garbled - usually a Google Meet HTML change.
+title: "[capture] "
+labels: ["capture", "selectors"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Google changes Meet's HTML often, which can break caption capture. Thanks for reporting -
+        the details below help us fix the selectors quickly.
+  - type: checkboxes
+    attributes:
+      label: Pre-checks
+      options:
+        - label: Google Meet **captions (CC) were turned on** during the meeting.
+          required: true
+        - label: I reloaded the extension (chrome://extensions -> Reload) and refreshed the Meet tab.
+          required: true
+  - type: dropdown
+    attributes:
+      label: What happens?
+      options:
+        - No transcript lines appear at all
+        - Lines appear but are duplicated / garbled
+        - Wrong speaker names
+        - Non-speech text appears (buttons/labels)
+        - Something else
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Browser & version
+      placeholder: e.g. Chrome 139 on Windows 11
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Captions container HTML (very helpful)
+      description: |
+        In the Meet tab, open DevTools -> Elements, find the live captions box, right-click the
+        container -> Copy -> Copy outerHTML, and paste it here. Feel free to redact the words spoken.
+      render: html
+  - type: textarea
+    attributes:
+      label: Console errors (if any)
+      description: DevTools -> Console. Paste anything mentioning LocalCaptions.
+      render: shell

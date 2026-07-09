@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <span class="logo-dot"></span>
+      <span class="logo-text">LocalCaptions</span>
+    </header>
+
+    <section class="card live" id="liveCard">
+      <div class="live-head">
+        <span class="pill" id="livePill">Not in a meeting</span>
+      </div>
+      <div class="live-title" id="liveTitle"></div>
+      <div class="live-sub" id="liveSub">Open a Google Meet tab to start capturing.</div>
+      <div class="row" id="liveActions" hidden>
+        <button class="btn" id="btnPanel">Show panel</button>
+        <button class="btn" id="btnCopy">Copy transcript</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-title">Recent meetings</div>
+      <ul class="recent" id="recent"><li class="muted">No saved meetings yet.</li></ul>
+    </section>
+
+    <footer class="foot">
+      <button class="btn primary" id="btnHistory">Open full history</button>
+      <div class="stats" id="stats"></div>
+    </footer>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

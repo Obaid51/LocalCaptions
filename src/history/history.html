@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LocalCaptions - Transcripts</title>
+  <link rel="stylesheet" href="history.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sb-head">
+        <div class="brand"><span class="brand-dot"></span> LocalCaptions</div>
+        <div class="sb-sub">Saved meeting transcripts</div>
+      </div>
+      <div class="search">
+        <input id="search" type="search" placeholder="Search meetings & transcripts…" autocomplete="off" />
+      </div>
+      <ul class="mlist" id="mlist"></ul>
+      <div class="sb-foot">
+        <span id="sbStats" class="sb-stats"></span>
+        <button id="btnClear" class="link danger">Clear all</button>
+      </div>
+    </aside>
+
+    <main class="detail">
+      <div class="empty" id="emptyState">
+        <div class="empty-ico">🗒️</div>
+        <div>Select a meeting to view its transcript.</div>
+        <div class="empty-sub">Transcripts are captured automatically while you're in a Google Meet with captions on.</div>
+      </div>
+
+      <div class="viewer" id="viewer" hidden>
+        <header class="d-head">
+          <div class="d-titlewrap">
+            <h1 id="dTitle"></h1>
+            <div class="d-meta" id="dMeta"></div>
+          </div>
+          <div class="d-actions">
+            <input id="tsearch" class="tsearch" type="search" placeholder="Find in transcript…" hidden />
+            <button class="tbtn" data-act="find" title="Find in transcript">Find</button>
+            <button class="tbtn" data-act="copy" title="Copy full transcript">Copy</button>
+            <button class="tbtn" data-act="txt" title="Download as .txt">.txt</button>
+            <button class="tbtn" data-act="md" title="Download as Markdown">.md</button>
+            <button class="tbtn danger" data-act="delete" title="Delete this meeting">Delete</button>
+          </div>
+        </header>
+        <div class="transcript" id="transcript"></div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="history.js"></script>
+</body>
+</html>

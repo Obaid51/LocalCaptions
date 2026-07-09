@@ -1,0 +1,16 @@
+/*
+ * LocalCaptions - host-level styles (light DOM).
+ * The panel itself lives inside a Shadow DOM (see panel.js) for full isolation
+ * from Google Meet's CSS. Only the fixed-position host anchor is styled here;
+ * panel.js also sets these inline as a fallback if this sheet fails to load.
+ */
+#localcaptions-host {
+  position: fixed;
+  top: 88px;
+  right: 16px;
+  z-index: 2147483000; /* above Meet's UI */
+  width: max-content;
+}
+#localcaptions-host[hidden] {
+  display: none !important;
+}

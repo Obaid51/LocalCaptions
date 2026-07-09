@@ -1,0 +1,35 @@
+{
+  "name": "localcaptions",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-only, real-time transcript overlay + searchable history for Google Meet. No cloud, no account, no bot. A privacy-first Chrome MV3 extension.",
+  "license": "MIT",
+  "author": "LocalCaptions contributors",
+  "homepage": "https://github.com/Obaid51/LocalCaptions#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Obaid51/LocalCaptions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Obaid51/LocalCaptions/issues"
+  },
+  "keywords": [
+    "google-meet",
+    "transcript",
+    "captions",
+    "chrome-extension",
+    "manifest-v3",
+    "privacy",
+    "local-first",
+    "meeting-notes",
+    "no-cloud"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "gen-icons": "node tools/gen-icons.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}

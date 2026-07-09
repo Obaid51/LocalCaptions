@@ -1,0 +1,21 @@
+name: "💡 Feature request"
+description: Suggest an idea for LocalCaptions.
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    attributes:
+      label: The problem / use case
+      description: What are you trying to do that's hard today?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed solution
+  - type: checkboxes
+    attributes:
+      label: Privacy check
+      description: LocalCaptions never sends data off-device.
+      options:
+        - label: This feature can work **without** any network requests or external services.
+          required: true
