@@ -3,3 +3,6 @@ node_modules/
 .DS_Store
 dist/
 *.zip
+
+# Maintainer-only notes (kept local, never published)
+PUBLISHING.md
