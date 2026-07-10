@@ -28,6 +28,7 @@
   "scripts": {
     "test": "node --test",
     "gen-icons": "node tools/gen-icons.mjs",
+    "gen-promo": "node tools/gen-promo.mjs",
     "package": "node tools/package.mjs"
   },
   "devDependencies": {
