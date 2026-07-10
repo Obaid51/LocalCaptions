@@ -36,8 +36,11 @@ async function handle(msg) {
 async function openHistory(sessionId) {
   const base = chrome.runtime.getURL('src/history/history.html');
   const url = sessionId ? `${base}#${encodeURIComponent(sessionId)}` : base;
-  // Reuse an already-open history tab if there is one.
-  const tabs = await chrome.tabs.query({ url: base + '*' });
+  // Reuse an already-open history tab if there is one. Querying by url needs no
+  // "tabs" permission for our own extension page, but guard it so a missing
+  // match (or any restriction) just falls through to opening a fresh tab.
+  let tabs = [];
+  try { tabs = await chrome.tabs.query({ url: base + '*' }); } catch (_e) { tabs = []; }
   if (tabs && tabs.length) {
     await chrome.tabs.update(tabs[0].id, { active: true, url });
     if (tabs[0].windowId != null) await chrome.windows.update(tabs[0].windowId, { focused: true });

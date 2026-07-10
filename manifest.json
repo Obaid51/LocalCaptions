@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Real-time transcript overlay for Google Meet. Copy any part live, and every meeting is auto-saved to a searchable history.",
   "minimum_chrome_version": "116",
-  "permissions": ["storage", "unlimitedStorage", "tabs"],
+  "permissions": ["storage", "unlimitedStorage"],
   "host_permissions": ["https://meet.google.com/*"],
   "action": {
     "default_popup": "src/popup/popup.html",

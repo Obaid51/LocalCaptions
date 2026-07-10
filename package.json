@@ -27,7 +27,8 @@
   ],
   "scripts": {
     "test": "node --test",
-    "gen-icons": "node tools/gen-icons.mjs"
+    "gen-icons": "node tools/gen-icons.mjs",
+    "package": "node tools/package.mjs"
   },
   "devDependencies": {
     "jsdom": "^24.1.0"
